@@ -1,0 +1,38 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    font-family: "Sitara", sans-serif;
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  
+  .order-now {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .order-now img {
+    max-width: 30px;
+    margin-right: 10px;
+  }
+
+  .order-now-link {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+  }
+  
+  .order-now-link:hover {
+    text-decoration: underline;
+  }
+  
+  .order-now-link:focus {
+    outline: none; /* Remove focus outline */
+  }
+  
