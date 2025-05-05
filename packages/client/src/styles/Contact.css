@@ -1,0 +1,113 @@
+.contact-container {
+    font-family: "SeoulNamsan CBL", sans-serif;
+    color: #4c0507;
+    margin-bottom: 20px; 
+  }
+  
+  .contact-header,
+  .email-header,
+  .whatsapp-header {
+    font-size: 1.8rem;
+    color: #4c0507;
+  }
+ 
+  .whatsapp-header {
+    font-size: 1.5rem;
+  }
+
+  .whatsapp-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .whatsapp-header p {
+    font-size: 1.5rem;
+    margin-top: 0; /* Hapus margin atas yang mungkin bawaan dari browser */
+  }
+
+  .email-header {
+    font-size: 1.5rem;
+  }
+  
+  .contact-form {
+    display: flex;
+    padding-top: 50px;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 50px;
+    flex-direction: column;
+    gap: 50px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  
+  .input-group {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+  }
+  
+  .form-group label {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  .form-group ::placeholder {
+    color: #dfb9b9;
+    font-family: "SeoulNamsan CBL", sans-serif;
+    font-size: large;
+  }
+  
+  .form-input {
+    border: none;
+    border-bottom: 2px solid #dfb9b9;
+    padding: 5px 0;
+    font-size: 1rem;
+    color: #4c0507;
+    background-color: transparent;
+    font-family: "SeoulNamsan CBL", sans-serif;
+    flex: 1;
+  }
+
+  .logo-section{
+    background-color: #edafb1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .form-textarea {
+    border: none;
+    border-bottom: 2px solid #dfb9b9;
+    padding: 5px 0;
+    font-size: 1rem;
+    color: #4c0507;
+    background-color: transparent;
+    font-family: "SeoulNamsan CBL", sans-serif;
+  }
+  
+  .form-submit {
+    padding: 10px 20px;
+    border-radius: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #F27180;
+    color: #ffffff;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: "SeoulNamsan CBL", sans-serif;
+  }
+  
+  .form-submit:hover {
+    background-color: #dfb9b9;
+    color: #4c0507;
+  }
+  

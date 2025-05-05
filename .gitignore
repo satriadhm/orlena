@@ -1,5 +1,32 @@
+# Dependencies
 node_modules
-dist
-coverage
+/.pnp
+.pnp.js
+package-lock.json
+
+# Testing
+/coverage
+
+# Production
+packages/client/build
+
+# Environment variables
 .env
-client/src/public/fonts
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS specific files
+.DS_Store
+
+# IDEs and editors
+/.idea
+/.vscode
+*.swp
+*.swo

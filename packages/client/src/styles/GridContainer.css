@@ -1,0 +1,61 @@
+/* File: src/styles/GridContainer.css */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0;
+  height: 100vh;
+}
+
+.grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  background-color: #cccbab;
+  color: white;
+  font-family: 'Sitara', sans-serif;
+  overflow: hidden; /* Ensure the content doesn't overflow */
+}
+
+.top-left {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.top-right {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  font-size: 24px;
+}
+
+.bottom-left {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.bottom-right {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bottom-left-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.bottom-left img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+}

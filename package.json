@@ -1,20 +1,21 @@
 {
-  "name": "orlena-server",
+  "name": "orlena-monorepo",
   "version": "1.0.0",
-  "main": "index.js",
-"scripts": {
-  "server": "node index.js",
-  "client": "cd client && npm start",
-  "dev": "concurrently \"npm run server\" \"npm run client\""
-},
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "body-parser": "^1.20.2",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
-    "express": "^4.19.2",
-    "nodemailer": "^6.9.14"
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "concurrently \"npm run start:server\" \"npm run start:client\"",
+    "start:client": "npm run start --workspace=packages/client",
+    "start:server": "npm run start --workspace=packages/server",
+    "build": "npm run build --workspace=packages/client",
+    "install:all": "npm install && npm run install:client && npm run install:server",
+    "install:client": "npm install --workspace=packages/client",
+    "install:server": "npm install --workspace=packages/server",
+    "test:client": "npm run test --workspace=packages/client"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }

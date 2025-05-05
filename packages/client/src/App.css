@@ -1,0 +1,173 @@
+.App {
+  text-align: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #edafb1;
+  height: 10vh;
+  color: white;
+  padding: 0 10%;
+  position: sticky; /* Make the navbar sticky */
+  top: 0; /* Stick to the top of the viewport */
+  z-index: 1000; /* Ensure it stays above other elements */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+.nav img {
+  height: 50px;
+}
+
+.nav a {
+  font-family: "Times New Roman", Times, serif;
+  text-decoration: none;
+  color: white;
+  font-weight: 300;
+  font-size: xx-large;
+  display: flex;
+  justify-content: center;
+}
+
+.landing {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background-image: url("./public/images/foto1.png");
+  background-size: cover;
+  background-position: center;
+  text-align: center; /* Center text horizontally */
+  color: white; /* Text color white */
+  font-family: "SeoulNamsan CBL", sans-serif; /* Font family */
+  font-size: xx-large;
+  padding: 0 20px; /* Add padding for better content appearance */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Text shadow effect */
+  overflow: hidden; /* Prevent overflow on pseudo-element */
+}
+
+.landing::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Black overlay with opacity */
+  z-index: 1;
+}
+
+.landing h1,
+.landing h3,
+.landing button {
+  position: relative;
+  z-index: 2;
+}
+
+.description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-right: 200px;
+  margin-left: 200px;
+  text-align: justify; /* Align text justified */
+}
+
+.image-container {
+  flex: 1;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center; /* Center image horizontally */
+  align-items: center; /* Center image vertically */
+}
+
+.image-container img {
+  max-width: 100%; /* Ensure image does not exceed container width */
+  height: auto; 
+}
+
+.text-container {
+  flex: 2;
+}
+
+.text-container p {
+  margin-bottom: 20px;
+  font-family: "Sitara", sans-serif;
+  line-height: 2;
+}
+
+.landing h1 {
+  margin-bottom: 10px; /* Reduce bottom margin for h1 */
+}
+
+.landing h3 {
+  margin-top: 0; /* Set top margin for h3 to 0 */
+  font-family: "SeoulNamsan CBL", sans-serif; /* Apply imported font */
+}
+
+.landing button {
+  border-radius: 40px;
+  padding: 18px 60px;
+  font-size: large;
+  border: none;
+  background-color: #edafb1;
+  color: white;
+  cursor: pointer;
+  font-family: "Times New Roman", sans-serif; /* Font family */
+}
+
+.landing button a {
+  text-decoration: none;
+  color: white;
+}
+
+.landing button:hover {
+  background-color: #d48689;
+}
+
+.best-selling {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Space out the elements */
+  margin: 30px 0; /* Add some margin above and below */
+}
+
+.best {
+  display: flex;
+  justify-content: space-around; /* Spread items evenly */
+  align-items: center;
+  flex: 1; /* Allow the menu to take available space */
+}
+
+.best-selling h2 {
+  color: #4C0507; /* Set the text color */
+  font-family: "SeoulNamsan CBL", sans-serif; /* Use the desired font */
+  font-size: 2.5rem; /* Increase the font size */
+  margin-bottom: 20px; /* Add margin below the heading */
+}
+
+.best-selling img {
+  max-width: 100px; /* Set the maximum width for logos */
+  height: auto;
+  border-radius: 10%;
+}
+
+@font-face {
+  font-family: "SeoulNamsan CBL";
+  src: url("./public/fonts/SeoulNamsanCondensed-Bold.ttf") format("truetype"),
+    url("./public/fonts/SeoulNamsanCondensed-Black.ttf") format("truetype"),
+    url("./public/fonts/SeoulNamsanCondensed-ExtraBold.ttf") format("truetype"),
+    url("./public/fonts/SeoulNamsanCondensed-Light.ttf") format("truetype"),
+    url("./public/fonts/SeoulNamsanCondensed-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Sitara";
+  src: url("./public/fonts/Sitara-Bold.ttf") format("truetype"),
+    url("./public/fonts/Sitara-BoldItalic.ttf") format("truetype"),
+    url("./public/fonts/Sitara-Italic.ttf") format("truetype"),
+    url("./public/fonts/Sitara-Regular.ttf") format("truetype");
+}
