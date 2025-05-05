@@ -1,6 +1,6 @@
 // Updated index.js for the monorepo structure
 const express = require("express");
-require("dotenv").config({ path: '../../.env' }); // Updated path to load from root .env file
+require("dotenv").config({ path: '../../.env' }); 
 const nodemailer = require("nodemailer");
 const bodyParser = require("body-parser");
 const cors = require("cors");

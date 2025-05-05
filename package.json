@@ -15,6 +15,9 @@
     "install:server": "npm install --workspace=packages/server",
     "test:client": "npm run test --workspace=packages/client"
   },
+  "dependencies": {
+    "nodemailer": "^7.0.2"
+  },
   "devDependencies": {
     "concurrently": "^8.2.2"
   }

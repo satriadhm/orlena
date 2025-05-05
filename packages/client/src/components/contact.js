@@ -24,36 +24,34 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setStatus({ submitted: true, success: false, message: 'Sending...' });
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setStatus({ submitted: true, success: false, message: 'Sending...' });
+  
+  try {
+    // Use relative path for API
+    const response = await axios.post('/api/send-email', formData);
+    console.log('Success:', response.data);
     
-    try {
-      // Use environment variable for API URL if available
-      const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000';
-      
-      const response = await axios.post(`${apiUrl}/send-email`, formData);
-      console.log('Success:', response.data);
-      
-      setStatus({
-        submitted: true,
-        success: true,
-        message: 'Message sent successfully!'
-      });
-      
-      // Clear form
-      setFormData({ name: "", email: "", message: "" });
-      
-    } catch (error) {
-      console.error('Error:', error);
-      
-      setStatus({
-        submitted: true,
-        success: false,
-        message: 'Error sending message. Please try again.'
-      });
-    }
-  };
+    setStatus({
+      submitted: true,
+      success: true,
+      message: 'Message sent successfully!'
+    });
+    
+    // Clear form
+    setFormData({ name: "", email: "", message: "" });
+    
+  } catch (error) {
+    console.error('Error:', error);
+    
+    setStatus({
+      submitted: true,
+      success: false,
+      message: 'Error sending message. Please try again.'
+    });
+  }
+};
 
   return (
     <div className="contact-container">
